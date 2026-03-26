@@ -7,7 +7,7 @@ import '../model/task.dart';
 class ContentFormDialog extends StatefulWidget {
   final Task? actualTask;
 
-  const ContentFormDialog({ Key? key, this.actualTask });
+  const ContentFormDialog({Key? key, this.actualTask}) : super(key: key);
 
   @override
   State<ContentFormDialog> createState() => ContentFormDialogState();
@@ -86,7 +86,7 @@ class ContentFormDialogState extends State<ContentFormDialog> {
   bool validatedData() => formKey.currentState?.validate() == true;
 
   Task get newTask => Task(
-    id: widget.actualTask?.id ?? 0,
+    id: widget.actualTask?.id,
     description: descriptionController.text,
     deliveryAt: deliveryAtController.text.isEmpty ? null : deliveryAtFormat.parse(deliveryAtController.text)
   );

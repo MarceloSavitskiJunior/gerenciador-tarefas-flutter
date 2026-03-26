@@ -12,9 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Gerenciador de Tarefas',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: .fromSeed(
+            seedColor: Color(0xFF00A255),
+            brightness: Brightness.dark,
+        ),
       ),
       home: ListTasksPage(),
     );
